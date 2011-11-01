@@ -1,0 +1,51 @@
+MIKROONE LISTING.
+ASSEMBLER V1.0 on 08:44:43 01/29/10
+
+		; Gauss-Summe rekursiv
+		AUFGABE4:
+		
+ 000 DA00		IN R[2],R[0]    ; Eingabe Zeile 0 in Register speichern
+ 001 3B10		ADD R[3],R[2],R[0]
+ 002 C803		PSH R[3]
+		
+			LOOP:
+ 003 3C21			ADD R[4],R[4],R[1]
+ 004 3319			SUB R[3],R[3],R[1]
+ 005 6007			JNZ SUBA
+ 006 E009			JZ SUMME
+		
+			SUBA:
+ 007 C803			PSH R[3]
+ 008 F003			JMP LOOP
+				
+			SUMME:
+ 009 4200			LDL R[2],0
+ 00A 600E			JNZ EXIT
+ 00B C003			POP R[3]
+ 00C 3A13			ADD R[2],R[2],R[3]
+ 00D F009			JMP SUMME
+			EXIT:
+		
+ 00E F800	HLT
+--------------------------------------------
+FOUND ERRORS: 0
+
+Labels found in the code:
+COUNT:5
+[AUFGABE4] at line 2with address: 0
+[SUBA] at line 14with address: 7
+	<-Ref[7] at line 11
+[LOOP] at line 8with address: 3
+	<-Ref[3] at line 16
+[EXIT] at line 24with address: 14
+	<-Ref[14] at line 20
+[SUMME] at line 18with address: 9
+	<-Ref[9] at line 12
+	<-Ref[9] at line 23
+
+
+The following Labels have no Target:
+COUNT:0
+
+--------------------------------------------
+FINISHED ON Fr Jan 29 08:44:43 MEZ 2010

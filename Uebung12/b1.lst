@@ -1,0 +1,28 @@
+MIKROONE LISTING.
+ASSEMBLER V1.0 on 08:58:10 01/15/10
+
+		
+		BEISPIEL_1:	
+ 000 42FF		LDL R[2],$FF
+ 001 4304		LDL R[3],$04
+			
+			LOOPY:
+ 002 3C22			ADD R[4],R[4],R[2]	
+ 003 3319			SUB R[3],R[3],R[1]	
+ 004 6002			JNZ LOOPY
+ 005 F800		HLT
+--------------------------------------------
+FOUND ERRORS: 0
+
+Labels found in the code:
+COUNT:2
+[BEISPIEL_1] at line 2with address: 0
+[LOOPY] at line 6with address: 2
+	<-Ref[2] at line 9
+
+
+The following Labels have no Target:
+COUNT:0
+
+--------------------------------------------
+FINISHED ON Fr Jan 15 08:58:10 MEZ 2010

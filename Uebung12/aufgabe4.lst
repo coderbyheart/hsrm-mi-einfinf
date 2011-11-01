@@ -1,0 +1,32 @@
+MIKROONE LISTING.
+ASSEMBLER V1.0 on 08:19:31 01/29/10
+
+		; Gauss-Summe iterativ
+		AUFGABE4:
+		
+ 000 DA00		IN R[2],R[0]    ; Eingabe Zeile 0 in Register speichern
+ 001 3B10		ADD R[3],R[2],R[0]
+		
+			LOOP:
+ 002 3C21			ADD R[4],R[4],R[1]
+ 003 3D2C			ADD R[5],R[5],R[4]
+ 004 3319			SUB R[3],R[3],R[1]
+ 005 6002			JNZ LOOP
+				
+		
+ 006 F800	HLT
+--------------------------------------------
+FOUND ERRORS: 0
+
+Labels found in the code:
+COUNT:2
+[AUFGABE4] at line 2with address: 0
+[LOOP] at line 7with address: 2
+	<-Ref[2] at line 11
+
+
+The following Labels have no Target:
+COUNT:0
+
+--------------------------------------------
+FINISHED ON Fr Jan 29 08:19:31 MEZ 2010

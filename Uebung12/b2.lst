@@ -1,0 +1,30 @@
+MIKROONE LISTING.
+ASSEMBLER V1.0 on 09:04:43 01/15/10
+
+		
+		BEISPIEL_2:
+			
+ 000 4AFF		LDH R[2],$FF	
+ 001 4211		LDL R[2],$11	
+ 002 4310		LDL R[3],$10	
+			
+ 003 C802		PSH R[2]	
+ 004 C803		PSH R[3]	
+ 005 C002		POP R[2]	
+ 006 C003		POP R[3]
+			
+ 007 F800	HLT 
+		
+--------------------------------------------
+FOUND ERRORS: 0
+
+Labels found in the code:
+COUNT:1
+[BEISPIEL_2] at line 2with address: 0
+
+
+The following Labels have no Target:
+COUNT:0
+
+--------------------------------------------
+FINISHED ON Fr Jan 15 09:04:43 MEZ 2010

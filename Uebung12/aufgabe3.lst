@@ -1,0 +1,29 @@
+MIKROONE LISTING.
+ASSEMBLER V1.0 on 09:16:51 01/15/10
+
+		AUFGABE3:
+		
+ 000 4210		LDL R[2],16 ; 16 in Register 2 speichern
+ 001 4304		LDL R[3],4  ; 4 in Register 3 speichern
+		
+			LOOP:
+ 002 3D29			ADD R[5],R[5],R[1]
+ 003 3213			SUB R[2],R[2],R[3]
+ 004 6002			JNZ LOOP
+		
+ 005 F800	HLT
+--------------------------------------------
+FOUND ERRORS: 0
+
+Labels found in the code:
+COUNT:2
+[AUFGABE3] at line 1with address: 0
+[LOOP] at line 6with address: 2
+	<-Ref[2] at line 9
+
+
+The following Labels have no Target:
+COUNT:0
+
+--------------------------------------------
+FINISHED ON Fr Jan 15 09:16:51 MEZ 2010

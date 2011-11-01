@@ -1,0 +1,36 @@
+MIKROONE LISTING.
+ASSEMBLER V1.0 on 08:31:22 01/29/10
+
+		; Teile 15 / 4
+		AUFGABE3:
+		
+ 000 420F		LDL R[2],15 ; 15 in Register 2 speichern
+ 001 4304		LDL R[3],4  ; 4 in Register 3 speichern
+		
+			LOOP:
+ 002 3D29			ADD R[5],R[5],R[1] ; teilerzähler um eins erhöhen
+ 003 3213			SUB R[2],R[2],R[3] ; teiler von summe abziehen
+ 004 E806			JC TERM ; wenn überlauf, dann springe zu term
+ 005 6002			JNZ LOOP ; weiter ...
+		
+			TERM:
+ 006 3529			SUB R[5],R[5],R[1] ; teilerzähle um eins verringern
+		
+ 007 F800	HLT
+--------------------------------------------
+FOUND ERRORS: 0
+
+Labels found in the code:
+COUNT:3
+[AUFGABE3] at line 2with address: 0
+[LOOP] at line 7with address: 2
+	<-Ref[2] at line 11
+[TERM] at line 13with address: 6
+	<-Ref[6] at line 10
+
+
+The following Labels have no Target:
+COUNT:0
+
+--------------------------------------------
+FINISHED ON Fr Jan 29 08:31:22 MEZ 2010
